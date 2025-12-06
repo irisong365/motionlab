@@ -71,7 +71,7 @@ export function SkeletonViewer({ frames }: SkeletonViewerProps) {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [keypointCount, setKeypointCount] = useState(0);
-  const [viewMode, setViewMode] = useState<ViewMode>("combined");
+  const [viewMode, setViewMode] = useState<ViewMode>();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isLoading, _setIsLoading] = useState(false);
 
@@ -399,7 +399,7 @@ export function SkeletonViewer({ frames }: SkeletonViewerProps) {
     }
 
     // Only show skeleton in skeleton or combined mode
-    const showSkeleton = viewMode === "skeleton" || viewMode === "combined";
+    const showSkeleton = viewMode === "skeleton";
     
     if (showSkeleton) {
       const visibleJoints = createSkeleton(frame, skeletonGroup, true, true);
