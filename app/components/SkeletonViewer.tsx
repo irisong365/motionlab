@@ -71,7 +71,7 @@ export function SkeletonViewer({ frames }: SkeletonViewerProps) {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [keypointCount, setKeypointCount] = useState(0);
-  const [viewMode, setViewMode] = useState<ViewMode>();
+  const [viewMode, setViewMode] = useState<ViewMode>("skeleton");
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isLoading, _setIsLoading] = useState(false);
 
